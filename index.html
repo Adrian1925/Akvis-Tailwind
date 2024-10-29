@@ -14,13 +14,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
     <style>
-        spline-viewer {
-            flex: 0.5; /* Setengah dari lebar layar */
-        }
+        /* spline-viewer {
+            flex: 0.5;
+            background-color:
+        } */
         .keterangan {
-            flex: 0.5; /* Setengah dari lebar layar */
+            flex: 0.5;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: transparent;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
     </style>
@@ -36,27 +37,28 @@
         </div>
     
         <!-- Navbar di tengah -->
-        <nav id="navmenu" class="hidden md:flex justify-center flex-grow mx-8">
-            <ul class="flex space-x-6 text-[#37517e] md:text-xs lg:text-sm xl:text-md font-semibold">
-                <li><a href="#utama" class="hover:text-gray-200">Utama</a></li>
-                <li><a href="Tentangkami.html" class="hover:text-gray-200">Tentang Kami</a></li>
-                <li><a href="#" class="hover:text-gray-200">Mentor</a></li>
-                <li class="relative group">
-                    <a href="#kelas" class="hover:text-gray-200 flex items-center">Program Pembelajaran <i
-                            class="bi bi-chevron-down ml-1"></i></a>
-                    <ul class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 py-2 lg:text-sm ">
-                        <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Audio Composing</a></li>
-                        <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Design Graphic</a></li>
-                        <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Color Grading</a></li>
-                        <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">3D General</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    
-        <!-- Tombol "Masuk" di kanan atas -->
-        <a class="hidden md:inline-block bg-pink-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-100 hover:text-blue-600"
-            href="#about">Masuk</a>
+        <div class="flex justify-center bg-gray-800/10 backdrop-blur-md rounded-full py-5 px-12 mx-auto mt-4 max-w-xl">
+            <nav id="navmenu" class="hidden md:flex justify-center">
+                <ul class="flex space-x-6 text-white font-semibold">
+                    <li><a href="#utama" class="text-blue-500 hover:text-gray-200">Utama</a></li>
+                    <li><a href="Tentangkami.html" class="hover:text-gray-200">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-gray-200">Mentor</a></li>
+                    <li class="relative group">
+                        <a href="#kelas" class="hover:text-gray-200 flex items-center">Program Pembelajaran 
+                            <i class="bi bi-chevron-down ml-1"></i>
+                        </a>
+                        <ul class="absolute hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg mt-2 py-2 w-48">
+                            <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Audio Composing</a></li>
+                            <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Design Graphic</a></li>
+                            <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">Color Grading</a></li>
+                            <li><a href="#kelas" class="block px-4 py-2 hover:bg-gray-100">3D General</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <a class="hidden md:inline-block bg-pink-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-gray-100 hover:text-blue-600"
+            href="#utama">Masuk</a>
     
         <div class="ml-4">
             <button id="mobile-menu-button" class="md:hidden text-2xl text-white focus:outline-none" onclick="toggleMobileMenu()">
@@ -84,7 +86,6 @@
         <!-- Konten yang akan disembunyikan di mobile -->
         <div id="utama" class="hidden sm:block lg:w-screen lg:h-screen xl:w-screen xl:h-screen bg-cover bg-right bg-no-repeat py-20 md:px-16 md:py-8 lg:py-32 px-6 lg:px-32 " style="background-image: url('/assets/Background.png'); background-size: 80%; background-position: top right;">
             <div class="flex w-full">
-                <!-- Left Text Content -->
                 <div class="text-left mt-32 w-full lg:w-1/2 md:w-1/2 mb-8 lg:mb-0" data-aos="zoom-out">
                     <h1 class="text-2xl lg:text-6xl md:text-3xl font-extrabold text-gray-900 leading-tight">
                         Siapapun Bisa <br> Jago, Coba aja <br> dulu!
@@ -93,7 +94,8 @@
                         Bukan hanya peluang karir, Anda bisa belajar <br>berbagai macam skill dengan berbagai <br>kemudahan yang telah kami sediakan.
                     </p>
                     <div class="mt-8">
-                        <a href="#about" class="bg-pink-500 text-white font-semibold px-10 py-5 rounded-full hover:bg-pink-600">Mari Belajar!</a>
+                        <a href="https://akademi-visual-pr1.myr.id/pl/evis-3d" class="bg-pink-500 text-white font-semibold px-10 py-5 rounded-full hover:bg-pink-600">Mari Belajar!</a>
+                        <a href="" class="bg-pink-500 text-white font-semibold px-10 py-5 rounded-full hover:bg-pink-600">Beli Asset 3D!</a>
                     </div>
                 </div>
     
@@ -116,7 +118,7 @@
                         Bukan hanya peluang karir, Anda bisa belajar <br> berbagai macam skill dengan berbagai <br> kemudahan yang telah kami sediakan.
                     </p>
                     <div class="mt-8">
-                        <a href="#about" class="bg-pink-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-600">Mari Belajar!</a>
+                        <a href="https://akademi-visual-pr1.myr.id/pl/evis-3d" class="bg-pink-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-600">Mari Belajar!</a>
                     </div>
                 </div>
         
@@ -137,7 +139,7 @@
                     <h2 class="text-dark text-2xl font-bold mb-6">Keterangan</h2>
                     <p>Potensi dan kebutuhan konten 3D semakin meningkat seiring berkembangnya metaverse, di mana pengguna mencari pengalaman imersif dan interaktif. Konten 3D menjadi kunci dalam menciptakan lingkungan virtual yang menarik, memungkinkan kolaborasi, permainan, dan perdagangan. Dengan demikian, investasi dalam konten 3D sangat strategis untuk mengoptimalkan interaksi di metaverse.</p>
                     <div class="mt-8">
-                        <a href="#about" class="bg-pink-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-600">Mari Belajar!</a>
+                        <a href="https://akademi-visual-pr1.myr.id/pl/evis-3d" class="bg-pink-500 text-white font-semibold px-8 py-4 rounded-full hover:bg-pink-600">Mari Belajar!</a>
                     </div>
                 </div>
             </div>
@@ -360,7 +362,7 @@
                 <img src="assets/c4.png" alt="3D General" class="h-24 mb-4 object-contain" />
                 <h4 class="text-xl font-semibold text-purple-700 hover:text-blue-500 mb-2">3D General</h4>
                 <p class="text-white hover:text-gray-800 mb-4">Skill yang akan sangat dibutuhkan di masa depan, apalagi dengan kehadiran metaverse, mari siapkan waktu untuk menguasainya.</p>
-                <a href="https://akademi-visual-pr1.myr.id/course/3d-general" class="text-pink-500 hover:underline mt-auto">Selengkapnya</a>
+                <a href="https://akademi-visual-pr1.myr.id/pl/evis-3d" class="text-pink-500 hover:underline mt-auto">Selengkapnya</a>
               </div>
             </div>
         </div>
@@ -396,7 +398,7 @@
                 </div>
                 
                 <!-- Button -->
-                <a href="#about" class="bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8 rounded-full hover:bg-pink-600 transition duration-300">
+                <a href="#kelas" class="bg-pink-500 text-white font-bold py-2 px-5 sm:py-3 sm:px-8 rounded-full hover:bg-pink-600 transition duration-300">
                     Pilih Paket
                 </a>
             </div>
@@ -478,9 +480,6 @@
                 <a href="#" class="bg-pink-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-pink-600 transition duration-300 inline-block">Gabung</a>
               </div>
             </div>
-          </div>
-          
-          
         </div>
       </section>
 
@@ -526,7 +525,7 @@
                         <a href="#" class="hover:opacity-80"><img src="assets/logofb.png" alt="Facebook" class="w-8 h-8"></a>
                         <a href="#" class="hover:opacity-80"><img src="assets/logotwt.png" alt="Twitter" class="w-8 h-8"></a>
                         <a href="#" class="hover:opacity-80"><img src="assets/logoling.png" alt="LinkedIn" class="w-8 h-8"></a>
-                        <a href="#" class="hover:opacity-80"><img src="assets/logoig.png" alt="Instagram" class="w-8 h-8"></a>
+                        <a href="https://www.instagram.com/akvisid/" class="hover:opacity-80"><img src="assets/logoig.png" alt="Instagram" class="w-8 h-8"></a>
                     </div>
                 </div>
             </div>
@@ -567,7 +566,6 @@
                         <li><a href="#" class="hover:underline">Mitra Akvis</a></li>
                     </ul>
                     <h4 class="font-semibold text-[#37517e] mb-3 mt-4">Talkvis Program</h4>
-                    <!-- Tambahkan konten untuk Talkvis Program jika ada -->
                 </div>
     
                 <!-- Logo dan Social Media Links -->
@@ -577,7 +575,7 @@
                         <a href="#" class="hover:opacity-80"><img src="assets/logofb.png" alt="Facebook" class="w-8 h-8"></a>
                         <a href="#" class="hover:opacity-80"><img src="assets/logotwt.png" alt="Twitter" class="w-8 h-8"></a>
                         <a href="#" class="hover:opacity-80"><img src="assets/logoling.png" alt="LinkedIn" class="w-8 h-8"></a>
-                        <a href="#" class="hover:opacity-80"><img src="assets/logoig.png" alt="Instagram" class="w-8 h-8"></a>
+                        <a href="https://www.instagram.com/akvisid/" class="hover:opacity-80"><img src="assets/logoig.png" alt="Instagram" class="w-8 h-8"></a>
                     </div>
                 </div>
             </div>
@@ -588,15 +586,6 @@
             </div>
         </div>
     </footer>
-    
-    
-    
-    
-    
-    
-      
-      
-      
     
       <script src="assets/js/carousel1.js"></script>
       <script>
@@ -611,13 +600,13 @@
         const navmenu = document.getElementById('navmenu');
 
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 50) {
-            navmenu.classList.add('text-gray-800'); // Dark text
-            navmenu.classList.remove('text-white'); // Remove white text
-            header.classList.add('bg-white', 'bg-opacity-20'); // Add transparent gray background
+            navmenu.classList.add('text-dark'); 
+            navmenu.classList.remove('text-white');
+            header.classList.add('bg-white', 'bg-opacity-80');
         } else {
-            header.classList.remove('bg-white', 'bg-opacity-20'); // Remove gray background
-            navmenu.classList.remove('text-gray-800'); // Remove dark text
-            navmenu.classList.add('text-white'); // Restore white text
+            header.classList.remove('bg-white', 'bg-opacity-80'); 
+            navmenu.classList.remove('text-gray-800'); 
+            navmenu.classList.add('text-white');
         }
     };
     </script>

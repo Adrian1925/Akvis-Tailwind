@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akvis</title>
+    <link href="assets/akvis.png" rel="icon">
+    <link href="assets/akvis.png" rel="apple-touch-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex flex-col lg:flex-row w-full">
+        <!-- Konten yang akan disembunyikan di mobile -->
+        <div id="utama"
+            class="hidden sm:flex items-center justify-center lg:w-screen lg:h-screen xl:w-screen xl:h-screen bg-cover bg-right bg-no-repeat py-20 md:px-16 md:py-8 lg:py-32 px-6 lg:px-32"
+            style="background-image: url('/assets/Background.png'); background-size: 80%; background-position: top right;">
+            <div class="flex items-center justify-center w-full h-full">
+                <div class="bg-white/80 rounded-lg p-8 md:p-16 shadow-lg w-1/2 max-w-3xl">
+                    <div class="text-center mb-8">
+                        <img src="/assets/logo.png" alt="Logo Medfo" class="mx-auto h-full w-full mb-4">
+                    </div>
+                    <form action="" onsubmit="sendwa(event)">
+                        <button type="submit"
+                        class="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-200 flex items-center justify-center space-x-2"
+                        onclick="sendwa()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"
+                            fill="currentColor">
+                            <path
+                                d="M16 1.339C7.82 1.339 1 8.159 1 16.339c0 2.785.735 5.538 2.127 7.951L1.01 31.34l7.33-2.082a14.99 14.99 0 0 0 7.66 2.08C24.18 31.339 31 24.519 31 16.339S24.18 1.339 16 1.339zM16 29.15c-2.559 0-5.074-.736-7.235-2.127l-.52-.325-4.36 1.239 1.23-4.244-.34-.532A12.93 12.93 0 0 1 3.072 16.34C3.072 9.053 9.073 3.052 16.359 3.052c7.286 0 13.287 6.002 13.287 13.287 0 7.287-6.001 13.287-13.287 13.287zm7.515-9.244c-.41-.204-2.428-1.195-2.806-1.336-.379-.142-.655-.204-.93.205-.276.407-1.065 1.335-1.305 1.611-.24.276-.481.31-.891.104-.41-.205-1.732-.64-3.302-2.036-1.22-1.088-2.036-2.426-2.276-2.836-.24-.407-.025-.628.18-.833.185-.184.41-.48.615-.716.21-.24.28-.41.415-.683.14-.276.07-.515-.035-.719-.104-.204-.925-2.21-1.268-3.03-.336-.815-.675-.702-.93-.713l-.775-.016c-.275 0-.718.104-1.092.515-.379.407-1.436 1.404-1.436 3.42s1.47 3.965 1.673 4.24c.204.276 2.876 4.402 6.96 5.777.973.334 1.73.53 2.318.675.975.234 1.86.202 2.562.123.78-.086 2.428-.993 2.772-1.953.343-.961.343-1.785.24-1.954-.104-.17-.38-.276-.79-.48z" />
+                        </svg>
+                        <span>Pesan Desain 3D</span>
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ini hp -->
+        <div id="utama"
+            class="block sm:hidden w-screen h-screen bg-cover bg-right bg-no-repeat flex items-center justify-center px-6"
+            style="background-image: url('/assets/Background.png'); background-size: cover; background-position: top right;">
+            <div class="bg-white/80 rounded-lg p-8 md:p-16 shadow-lg w-full max-w-md mx-auto">
+                <div class="text-center mb-8">
+                    <img src="/assets/logo.png" alt="Logo Medfo" class="mx-auto h-full w-full mb-4">
+                </div>
+                <form action="" onsubmit="sendwa(event)">
+                    <button type="submit"
+                    class="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-200 flex items-center justify-center space-x-2"
+                    onclick="sendwa()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32"
+                        fill="currentColor">
+                        <path
+                            d="M16 1.339C7.82 1.339 1 8.159 1 16.339c0 2.785.735 5.538 2.127 7.951L1.01 31.34l7.33-2.082a14.99 14.99 0 0 0 7.66 2.08C24.18 31.339 31 24.519 31 16.339S24.18 1.339 16 1.339zM16 29.15c-2.559 0-5.074-.736-7.235-2.127l-.52-.325-4.36 1.239 1.23-4.244-.34-.532A12.93 12.93 0 0 1 3.072 16.34C3.072 9.053 9.073 3.052 16.359 3.052c7.286 0 13.287 6.002 13.287 13.287 0 7.287-6.001 13.287-13.287 13.287zm7.515-9.244c-.41-.204-2.428-1.195-2.806-1.336-.379-.142-.655-.204-.93.205-.276.407-1.065 1.335-1.305 1.611-.24.276-.481.31-.891.104-.41-.205-1.732-.64-3.302-2.036-1.22-1.088-2.036-2.426-2.276-2.836-.24-.407-.025-.628.18-.833.185-.184.41-.48.615-.716.21-.24.28-.41.415-.683.14-.276.07-.515-.035-.719-.104-.204-.925-2.21-1.268-3.03-.336-.815-.675-.702-.93-.713l-.775-.016c-.275 0-.718.104-1.092.515-.379.407-1.436 1.404-1.436 3.42s1.47 3.965 1.673 4.24c.204.276 2.876 4.402 6.96 5.777.973.334 1.73.53 2.318.675.975.234 1.86.202 2.562.123.78-.086 2.428-.993 2.772-1.953.343-.961.343-1.785.24-1.954-.104-.17-.38-.276-.79-.48z" />
+                    </svg>
+                    <span>Pesan Desain 3D</span>
+                </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/beli.js"></script>
+
+</html>
